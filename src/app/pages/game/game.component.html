@@ -1,0 +1,69 @@
+<div
+  class="bg-gradient-to-r from-[#004e92] to-[#000428] w-full h-screen absolute"
+>
+  <div class="flex items-center justify-between p-4 score-card">
+    <img src="logo.svg" class="w-32 lg:w-52" alt="logo of rock page scissor" />
+    <div class="p-6 text-center bg-white rounded-lg bg-card lg:w-36 w-28">
+      <p class="uppercase text-score">score</p>
+      <p class="text-4xl font-bold text-dark-text lg:text-6xl">
+        {{ getScore() }}
+      </p>
+    </div>
+  </div>
+  <div class="playing-field">
+    <i
+      (click)="handleSelection(1)"
+      class="play-items rock fa-solid fa-8x fa-hand-back-fist"
+    ></i>
+    <i
+      (click)="handleSelection(2)"
+      class="play-items paper fa-solid fa-hand fa-8x"
+    ></i>
+    <i
+      (click)="handleSelection(3)"
+      class="play-items scissor fa-solid fa-hand-scissors fa-8x"
+    ></i>
+  </div>
+
+  <div *ngIf="getUserPicked()" class="choice-box">
+    <div class="user-choice-box">
+      <i
+        *ngIf="getLabelNumberUser() === 1"
+        class="user play-items fa-fade rock fa-solid fa-10x fa-hand-back-fist"
+      ></i>
+      <i
+        *ngIf="getLabelNumberUser() === 2"
+        class="user play-items fa-fade paper fa-solid fa-hand fa-10x"
+      ></i>
+      <i
+        *ngIf="getLabelNumberUser() === 3"
+        class="user play-items fa-fade scissor fa-solid fa-hand-scissors fa-10x"
+      ></i>
+
+      <h1 *ngIf="getUserPicked()" class="p-2 mt-2 text-3xl text-white">You</h1>
+    </div>
+
+    <h1 *ngIf="getResult()" class="text-3xl font-bold uppercase result-message">
+      {{ getResultMessage() }}
+    </h1>
+
+    <div class="computer-choice-box">
+      <i
+        *ngIf="getLabelNumberComputer() === 1"
+        class="computer play-items fa-fade rock fa-solid fa-10x fa-hand-back-fist"
+      ></i>
+      <i
+        *ngIf="getLabelNumberComputer() === 2"
+        class="computer play-items fa-fade paper fa-solid fa-hand fa-10x"
+      ></i>
+      <i
+        *ngIf="getLabelNumberComputer() === 3"
+        class="computer play-items fa-fade scissor fa-solid fa-hand-scissors fa-10x"
+      ></i>
+
+      <h1 *ngIf="getComputerPicked()" class="p-2 mt-2 text-3xl text-white">
+        Computer
+      </h1>
+    </div>
+  </div>
+</div>

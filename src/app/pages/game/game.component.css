@@ -1,0 +1,95 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.score-card {
+  width: 960px;
+  height: 164px;
+  position: relative;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #606e85;
+  border-radius: 10px;
+  position: relative;
+  color: white;
+}
+
+.text-score {
+  color: #2a46c0;
+  letter-spacing: 3px;
+}
+.text-dark-text {
+  color: #3b4363;
+}
+.playing-field {
+  display: flex;
+  justify-content: space-around;
+  width: 960px;
+  height: auto;
+  position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  //border: 1px solid rgb(237, 19, 19);
+  margin-bottom: 15px;
+}
+
+.choice-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  height: auto;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  //border: 1px solid rgb(184, 179, 177);
+  border-radius: 10px;
+  text-align: center;
+}
+.result-message {
+  display: block;
+  //border: 1px solid whitesmoke;
+  color: #f4f4f4;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.play-items {
+  color: transparent;
+  background-clip: text;
+  cursor: pointer;
+  transition: all 1s ease;
+  animation-iteration-count: 1;
+  //border: 1px solid white;
+}
+
+.rock {
+  background-image: linear-gradient(rgb(203, 91, 35), rgb(235, 237, 243));
+}
+.rock:hover {
+  background-image: linear-gradient(rgb(253, 88, 5), rgb(235, 237, 243));
+}
+.paper {
+  background-image: linear-gradient(rgb(222, 56, 197), rgb(222, 206, 215));
+}
+.paper:hover {
+  background-image: linear-gradient(rgb(243, 8, 173), rgb(222, 206, 215));
+}
+.scissor {
+  background-image: linear-gradient(rgb(0, 102, 255), rgb(231, 219, 222));
+}
+.scissor:hover {
+  background-image: linear-gradient(rgb(17, 0, 255), rgb(231, 219, 222));
+}

@@ -1,4 +1,4 @@
-# RockPaperSissorApp
+# Rock Paper Sissor App
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
 
@@ -57,3 +57,18 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+---
+
+Style Guide | Design | Assets
+
+- Fontawesome Icons urls
+  <i class="rock fa-solid fa-6x fa-hand-back-fist"></i>
+  <i class="scissor fa-solid fa-hand-scissors fa-6x"></i>
+  <i class="paper fa-solid fa-hand fa-6x"></i>
+
+- background gradient colors
+  - from - #000428
+  - to - #004e92
+  - theme - Frost [(uigradients.com)](https://uigradients.com/#Frost)
+  - background: linear-gradient(to right, #004e92, #000428);
