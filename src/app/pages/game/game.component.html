@@ -12,21 +12,24 @@
       </p>
     </div>
   </div>
+
+  <!--playing fields top icons -->
   <div class="relative w-full playing-field md:w-10/12 lg:w-5/12">
     <i
       (click)="handleSelection(1)"
-      class="play-items rock fa-solid fa-8x fa-hand-back-fist"
+      class="fa-icon play-items rock fa-solid fa-8x fa-hand-back-fist"
     ></i>
     <i
       (click)="handleSelection(2)"
-      class="play-items paper fa-solid fa-hand fa-8x"
+      class="fa-icon play-items paper fa-solid fa-hand fa-8x"
     ></i>
     <i
       (click)="handleSelection(3)"
-      class="play-items scissor fa-solid fa-hand-scissors fa-8x"
+      class="fa-icon play-items scissor fa-solid fa-hand-scissors fa-8x"
     ></i>
   </div>
 
+  <!--User Choices-->
   <div
     *ngIf="getUserPicked()"
     class="choice-box sm:w-full md:w-10/12 lg:w-5/12"
@@ -34,50 +37,72 @@
     <div class="user-choice-box">
       <i
         *ngIf="getLabelNumberUser() === 1"
-        class="user play-items fa-fade rock fa-solid fa-10x fa-hand-back-fist"
+        class="fa-icon-big user play-items fa-fade rock fa-solid fa-10x fa-hand-back-fist"
       ></i>
       <i
         *ngIf="getLabelNumberUser() === 2"
-        class="user play-items fa-fade paper fa-solid fa-hand fa-10x"
+        class="fa-icon-big user play-items fa-fade paper fa-solid fa-hand fa-10x"
       ></i>
       <i
         *ngIf="getLabelNumberUser() === 3"
-        class="user play-items fa-fade scissor fa-solid fa-hand-scissors fa-10x"
+        class="fa-icon-big user play-items fa-fade scissor fa-solid fa-hand-scissors fa-10x"
       ></i>
 
-      <h1 *ngIf="getUserPicked()" class="p-2 mt-2 text-3xl text-white">You</h1>
+      <h1
+        *ngIf="getUserPicked()"
+        class="p-2 mt-2 text-3xl text-white label md:text-2xl"
+      >
+        You
+      </h1>
+
+      <!--center results area -->
     </div>
-    <div class="message-reset" *ngIf="getResult()">
-      <h1 class="text-3xl font-bold uppercase result-message">
+    <div class="result-box" *ngIf="getResult()">
+      <h1 class="text-3xl font-bold uppercase center-result-box-message">
         {{ getResultMessage() }}
       </h1>
-      <button
-        *ngIf="getShowButton()"
-        type="reset"
-        class="w-40 py-2 tracking-wider text-red-800 rounded-lg cursor-pointer bg-slate-300 font-extralight hover:bg-slate-500"
-        (click)="handlePlayAgain()"
-      >
-        Play Again
-      </button>
     </div>
+    <!--end center results -->
 
     <div class="computer-choice-box">
       <i
         *ngIf="getLabelNumberComputer() === 1"
-        class="computer play-items fa-fade rock fa-solid fa-10x fa-hand-back-fist"
+        class="fa-icon-big computer play-items fa-fade rock fa-solid fa-10x fa-hand-back-fist"
       ></i>
       <i
         *ngIf="getLabelNumberComputer() === 2"
-        class="computer play-items fa-fade paper fa-solid fa-hand fa-10x"
+        class="fa-icon-big computer play-items fa-fade paper fa-solid fa-hand fa-10x"
       ></i>
       <i
         *ngIf="getLabelNumberComputer() === 3"
-        class="computer play-items fa-fade scissor fa-solid fa-hand-scissors fa-10x"
+        class="fa-icon-big computer play-items fa-fade scissor fa-solid fa-hand-scissors fa-10x"
       ></i>
 
-      <h1 *ngIf="getComputerPicked()" class="p-2 mt-2 text-3xl text-white">
+      <h1
+        *ngIf="getComputerPicked()"
+        class="p-2 mt-2 text-3xl text-white label"
+      >
         Computer
       </h1>
     </div>
+  </div>
+  <!-- <div class="message-lower-box" *ngIf="getResult()">
+    <h1 class="text-3xl font-bold uppercase md:text-2xl result-message-lower">
+      {{ getResultMessage() }}
+    </h1>
+  </div> -->
+  <!--lower play button-->
+  <div class="footer">
+    <h1 class="text-3xl font-bold uppercase md:text-2xl footer-results">
+      {{ getResultMessage() }}
+    </h1>
+    <button
+      *ngIf="getShowButton()"
+      type="reset"
+      class="w-40 py-2 tracking-wider text-red-800 rounded-lg cursor-pointer bg-slate-300 font-extralight hover:bg-slate-500"
+      (click)="handlePlayAgain()"
+    >
+      Play Again
+    </button>
   </div>
 </div>
