@@ -48,17 +48,16 @@
         class="fa-icon-big user play-items fa-fade scissor fa-solid fa-hand-scissors fa-10x"
       ></i>
 
-      <h1
-        *ngIf="getUserPicked()"
-        class="p-2 mt-2 text-3xl text-white label md:text-2xl"
-      >
+      <h1 *ngIf="getUserPicked()" class="p-2 mt-2 text-3xl text-white label">
         You
       </h1>
 
       <!--center results area -->
     </div>
-    <div class="result-box" *ngIf="getResult()">
-      <h1 class="text-3xl font-bold uppercase center-result-box-message">
+    <div class="center-result-box" *ngIf="getResult()">
+      <h1
+        class="text-4xl font-bold uppercase md:text-2xl center-result-box-message"
+      >
         {{ getResultMessage() }}
       </h1>
     </div>
@@ -86,14 +85,10 @@
       </h1>
     </div>
   </div>
-  <!-- <div class="message-lower-box" *ngIf="getResult()">
-    <h1 class="text-3xl font-bold uppercase md:text-2xl result-message-lower">
-      {{ getResultMessage() }}
-    </h1>
-  </div> -->
+
   <!--lower play button-->
   <div class="footer">
-    <h1 class="text-3xl font-bold uppercase md:text-2xl footer-results">
+    <h1 class="text-3xl font-bold uppercase md:text-2xl footer-message">
       {{ getResultMessage() }}
     </h1>
     <button

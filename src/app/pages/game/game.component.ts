@@ -45,10 +45,10 @@ export class GameComponent {
     this.labelNumberUser = theLabelNumberUser;
     this.userPicked = true;
     this.showButton = false;
+    this.result = false;
     setTimeout(() => {
       this.labelNumberComputer = this.getRandomInt(1, 3);
       this.computerPicked = true;
-      this.result = true;
     }, 1000);
     if (true) {
       setTimeout(() => {
@@ -56,6 +56,7 @@ export class GameComponent {
           this.getLabelNumberUser(),
           this.getLabelNumberComputer()
         );
+        this.result = true;
         this.showButton = true;
       }, 2000);
     }
