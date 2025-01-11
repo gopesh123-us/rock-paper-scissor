@@ -9,18 +9,20 @@ html {
 *::after {
   box-sizing: inherit;
 }
+.main {
+  position: relative;
+}
 
 .score-card {
-  width: 960px;
-  height: 164px;
-  position: relative;
+  //width: 50%;
+  //height: auto;
+  //position: relative;
   top: 12%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 2px solid #606e85;
-  border-radius: 10px;
-  position: relative;
-  color: white;
+  //border: 2px solid #606e85;
+  //border-radius: 10px;
+  //color: white;
 }
 
 .text-score {
@@ -60,6 +62,7 @@ html {
 }
 .result-message {
   display: block;
+  transform: translate(-0%, -100%);
   //border: 1px solid whitesmoke;
   color: #f4f4f4;
   font-weight: bold;
