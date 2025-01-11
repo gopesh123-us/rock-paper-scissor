@@ -2,7 +2,7 @@
   class="main bg-gradient-to-r from-[#004e92] to-[#000428] w-full h-screen relative flex flex-col"
 >
   <div
-    class="relative flex items-center justify-between p-4 border-2 border-solid rounded-lg score-card border-slate-500 sm:w-2/3 md:w-5/12"
+    class="relative flex items-center justify-between p-4 border-2 border-solid rounded-lg score-card border-slate-500 sm:w-full md:w-10/12 lg:w-5/12 top-[12%] left-2/4 -translate-x-1/2 -translate-y-1/2"
   >
     <img src="logo.svg" class="w-32 lg:w-52" alt="logo of rock page scissor" />
     <div class="p-6 text-center bg-white rounded-lg bg-card lg:w-36 w-28">
@@ -12,7 +12,7 @@
       </p>
     </div>
   </div>
-  <div class="playing-field">
+  <div class="relative w-full playing-field md:w-10/12 lg:w-5/12">
     <i
       (click)="handleSelection(1)"
       class="play-items rock fa-solid fa-8x fa-hand-back-fist"
@@ -27,7 +27,10 @@
     ></i>
   </div>
 
-  <div *ngIf="getUserPicked()" class="choice-box">
+  <div
+    *ngIf="getUserPicked()"
+    class="choice-box sm:w-full md:w-10/12 lg:w-5/12"
+  >
     <div class="user-choice-box">
       <i
         *ngIf="getLabelNumberUser() === 1"
