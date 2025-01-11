@@ -44,10 +44,19 @@
 
       <h1 *ngIf="getUserPicked()" class="p-2 mt-2 text-3xl text-white">You</h1>
     </div>
-
-    <h1 *ngIf="getResult()" class="text-3xl font-bold uppercase result-message">
-      {{ getResultMessage() }}
-    </h1>
+    <div class="message-reset" *ngIf="getResult()">
+      <h1 class="text-3xl font-bold uppercase result-message">
+        {{ getResultMessage() }}
+      </h1>
+      <button
+        *ngIf="getShowButton()"
+        type="reset"
+        class="w-40 py-2 tracking-wider text-red-800 rounded-lg cursor-pointer bg-slate-300 font-extralight hover:bg-slate-500"
+        (click)="handlePlayAgain()"
+      >
+        Play Again
+      </button>
+    </div>
 
     <div class="computer-choice-box">
       <i

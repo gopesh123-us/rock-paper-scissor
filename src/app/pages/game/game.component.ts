@@ -15,6 +15,7 @@ export class GameComponent {
   private userScore = 0;
   private labelNumberUser: number = 0;
   private labelNumberComputer: number = 0;
+  private showButton: boolean = false;
   private messages = new Map<number, string>([
     [1, 'computer wins'],
     [2, 'you win'],
@@ -43,6 +44,7 @@ export class GameComponent {
     this.resultMessage = '';
     this.labelNumberUser = theLabelNumberUser;
     this.userPicked = true;
+    this.showButton = false;
     setTimeout(() => {
       this.labelNumberComputer = this.getRandomInt(1, 3);
       this.computerPicked = true;
@@ -54,8 +56,19 @@ export class GameComponent {
           this.getLabelNumberUser(),
           this.getLabelNumberComputer()
         );
+        this.showButton = true;
       }, 2000);
     }
+  }
+  handlePlayAgain() {
+    this.result = false;
+    this.resultMessage = '';
+    this.computerPicked = false;
+    this.userPicked = false;
+    this.userScore = 0;
+    this.labelNumberUser = 0;
+    this.labelNumberComputer = 0;
+    this.showButton = false;
   }
   getRandomInt(min: number, max: number) {
     min = Math.ceil(min);
@@ -102,5 +115,8 @@ export class GameComponent {
   }
   getResultMessage(): string {
     return this.resultMessage;
+  }
+  getShowButton(): boolean {
+    return this.showButton;
   }
 }
