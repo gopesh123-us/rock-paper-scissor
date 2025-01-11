@@ -40,6 +40,7 @@ export class GameComponent {
   ]);
 
   handleSelection(theLabelNumberUser: number) {
+    this.resultMessage = '';
     this.labelNumberUser = theLabelNumberUser;
     this.userPicked = true;
     setTimeout(() => {
