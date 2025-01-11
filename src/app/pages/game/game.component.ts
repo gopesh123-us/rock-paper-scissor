@@ -37,7 +37,7 @@ export class GameComponent {
   private winningCombinations = new Map<number, number>([
     [3, 2],
     [4, 1],
-    [5, 2],
+    [5, 3],
   ]);
 
   handleSelection(theLabelNumberUser: number) {

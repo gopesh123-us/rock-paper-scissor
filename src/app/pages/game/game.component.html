@@ -87,8 +87,8 @@
   </div>
 
   <!--lower play button-->
-  <div class="footer">
-    <h1 class="text-3xl font-bold uppercase md:text-2xl footer-message">
+  <div class="footer" *ngIf="getResult()">
+    <h1 class="font-bold uppercase text-1xl md:text-2xl footer-msg">
       {{ getResultMessage() }}
     </h1>
     <button
