@@ -87,10 +87,11 @@ html {
   background-image: linear-gradient(rgb(17, 0, 255), rgb(231, 219, 222));
 }
 
-.play-again-btn-lower-div {
+.play-btn {
   position: relative;
   width: 100%;
-  transform: translate(-0%, 350%);
+  transform: translate(0%, 150%);
+  padding: 10px 30px;
   margin: 1 auto;
   text-align: center;
 }
@@ -196,6 +197,14 @@ html {
   }
   .message-n-reset-box {
     display: none;
+  }
+  .play-btn {
+    position: relative;
+    width: 100%;
+    transform: translate(0%, -10%);
+    padding: 10px 30px;
+    margin: 1 auto;
+    text-align: center;
   }
 }
 @media only screen and (min-width: 768px) {
